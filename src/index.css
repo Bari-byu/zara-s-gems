@@ -1,0 +1,13 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+*{font-family:"Inter",sans-serif}
+h1,h2,h3{font-family:"Playfair Display",serif}
+body{
+background:linear-gradient(180deg,#f0fdfa,#ffffff);
+color:#0f172a;
+}
+::-webkit-scrollbar{display:none}
+@theme { --color-primary:#0f766e; }
+.reset-tw * { all: revert !important; }
+.reset-tw strong { font-weight:600 !important; }
