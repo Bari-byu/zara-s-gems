@@ -35,8 +35,10 @@ import dashboard_icon_1_dark from "./dashboard_icon_1_dark.svg";
 import dashboard_icon_2_dark from "./dashboard_icon_2_dark.svg";
 import dashboard_icon_3_dark from "./dashboard_icon_3_dark.svg";
 import dashboard_icon_4 from "./dashboard_icon_4.svg";
+import profile_icon from "./profile_icon.jpeg"
 
 export const assets = {
+    profile_icon,
     facebook_icon,
     linkedin_icon,
     twitter_icon,

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../../context/AppContext";
+import { assets } from "../../assets/assets";
 import toast from "react-hot-toast";
 
 const Login = () => {
@@ -28,16 +29,24 @@ const Login = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen">
-            <div className="w-full max-w-sm p-6 max-md:m-6 border border-primary/30 shadow-xl shadow-primary/15 rounded-xl">
-                <div className="flex flex-col items-center justify-center">
-                    <div className="w-full py-6 text-center">
-                        <h1 className="text-3xl font-semibold">
-                            <span className="text-primary">Sign</span> {isLoginState ? "In" : "Up"}
-                        </h1>
-                        <p className="font-light text-sm pt-3 max-w-64 mx-auto">{isLoginState ? "Enter your credentials to access the author panel" : "Create a new account to add blogs and share your thoughts"}</p>
+        <div className="flex items-center justify-center min-h-screen bg-slate-50 px-4 py-8">
+            <div className="w-full max-w-sm p-6 max-md:m-6 border border-primary/25 backdrop-blur-xl bg-white/90 shadow-2xl shadow-slate-200 rounded-3xl">
+                <div className="flex flex-col items-center justify-center gap-6">
+                    <div className="relative">
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-purple-200 to-pink-200 blur-3xl" />
+                        <div className="relative flex items-center justify-center w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl shadow-primary/20 bg-white">
+                            <img src={assets.profile_icon} alt="Admin profile" className="w-full h-full object-cover" />
+                        </div>
                     </div>
-                    <form onSubmit={handleSubmit} className="w-full sm:max-w-md text-gray-600">
+                    <div className="w-full py-2 text-center">
+                        <h1 className="text-3xl font-semibold tracking-tight text-slate-900">
+                            <span className="text-primary">Admin</span> {isLoginState ? "Login" : "Signup"}
+                        </h1>
+                        <p className="font-light text-sm text-slate-500 pt-3 max-w-64 mx-auto">
+                            {isLoginState ? "Enter your credentials to access the author panel" : "Create a new account to add blogs and share your thoughts"}
+                        </p>
+                    </div>
+                    <form onSubmit={handleSubmit} className="w-full sm:max-w-md text-slate-700 space-y-5">
                         {!isLoginState && (
                             <div className="flex flex-col group">
                                 <label> Name </label>
